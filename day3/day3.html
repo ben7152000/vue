@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day3</title>
+</head>
+<body>
+
+  <div id="app">
+    姓 : <input type="text" placeholder="first name" v-model="firstName"> <br />
+    名 : <input type="text" placeholder="last name" v-model="lastName"> <br />
+    姓名1(單向) : <input type="text" placeholder="full name1" v-model="fullName1"> <br />
+    姓名2(單向) : <input type="text" placeholder="full name2" v-model="fullName2"> <br />
+    姓名3(雙向) : <input type="text" placeholder="full name3" v-model="fullName3"> <br />
+
+    <p>{{ fullName1 }}</p>
+    <p>{{ fullName1 }}</p>
+    <p>{{ fullName1 }}</p>
+  </div>
+  
+  <script src="../js/vue.js"></script>
+  <script src="./day3.js"></script>
+
+</body>
+</html>

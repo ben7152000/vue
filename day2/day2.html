@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day2</title>
+</head>
+<body>
+
+  <div id="app">
+    <h2>1. 大括號表達式</h2>
+      {{ msg }} <br />
+      {{ msg.toUpperCase() }}
+
+    <h2>2. 強制綁定數據</h2>
+    <img v-bind:src="imgUrl">
+    <img :src="imgUrl">
+
+    <h2>3. 綁定事件監聽</h2>
+    <button v-on:click="test">test1</button>
+    <button @click="test2('abc')">test2</button>
+    <button @click="test2(msg)">test3</button>
+
+  </div>
+  
+  <script src="../js/vue.js"></script>
+  <script src="./day2.js"></script>
+
+</body>
+</html>

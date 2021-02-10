@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day5</title>
+</head>
+<body>
+  
+  <div id="app">
+
+    <!-- 整個 DOM 會被拔掉 -->
+    <!-- 會創建對象 需要時間 -->
+    <p v-if='ok'>成功</p>
+    <p v-else>失敗</p>
+
+    <!-- 透過 display: none 移除 -->
+    <!-- 如果頻繁切換用 v-show -->
+    <p v-show='ok'>表白成功</p>
+    <p v-show='!ok'>表白失敗</p>
+
+    <button @click="ok=!ok">切換</button>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script src="./da5y.js"></script>
+
+</body>
+</html>
