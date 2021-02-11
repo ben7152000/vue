@@ -1,0 +1,9 @@
+<div>
+  <form>
+  <span>用戶</span><br/>
+  <input type="text" v-model="name"><br/>
+  <span>評論</span><br/>
+  <textarea rows="10" v-model="content"></textarea>
+  <input type="submit" @click.prevent="add">
+  </form>
+</div>

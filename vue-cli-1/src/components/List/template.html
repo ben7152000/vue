@@ -1,0 +1,5 @@
+<div>
+  <span>評論回覆</span><br/>
+  <h2 v-show="comments.length === 0">暫無評論</h2>
+  <Item v-for="(comment, index) in comments" :key="index" :comment="comment" :deleteComment="deleteComment" :index="index"/>
+</div>
