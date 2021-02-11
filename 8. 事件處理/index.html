@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>事件處理</title>
+</head>
+<body>
+
+  <div id="app">
+    <h2>1. 綁定監聽</h2>
+    <button @click="test1">test1</button>
+    <button @click="test2('ben')">test2</button>
+    <button @click="test3">test3</button>
+    <button @click="test4('123', $event)">test4</button>
+
+    <h2>2. 事件修飾符</h2>
+    <!-- 用 stop 停止冒泡-->
+    <div style="width: 200px; height:200px; background: red" @click="test5">
+      <div style="width: 100px; height:100px; background: blue;" @click.stop="test6"></div>
+    </div>
+
+    <!-- 用 prevent 停止默認行為 -->
+    <a href="http://www.google.com" @click.prevent="test7">去google</a>
+
+    <h2>3. 案件修飾符</h2>
+    <!-- 用 enter 或 13 來觸發 enter 鍵 -->
+    <input type="text" @keyup.13="test8">
+    <input type="text" @keyup.enter="test9">
+
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script src="./index.js"></script>
+
+</body>
+</html>
