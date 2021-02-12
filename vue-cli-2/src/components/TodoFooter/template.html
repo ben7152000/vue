@@ -1,0 +1,5 @@
+<div>
+  <input type="checkbox" v-model="isAllCheck">
+  <p>已完成{{ completeSize }}/全部{{ todos.length }}</p>
+  <button v-show="completeSize" @click="deleteCompleteTodos">刪除已完成任務</button>
+</div>

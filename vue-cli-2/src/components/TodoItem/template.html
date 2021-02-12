@@ -1,0 +1,5 @@
+<div @mouseenter="handleEnter(true)" @mouseleave="handleEnter(false)" :style="{background: bgColor}">
+  <input type="checkbox" v-model="todo.complete">
+  <p>{{ todo.title }}</p>
+  <button v-show="isShow" @click="deleteItem">刪除</button>
+</div>
